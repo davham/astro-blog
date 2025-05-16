@@ -1,4 +1,6 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
 import '../styles/global.css';
 const pageTitle = "About Me ";
 const identity = {
@@ -15,29 +17,8 @@ const finished = false;
 const goal = 3;
 const skillColor = 'red';
 ---
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{ pageTitle }</title>
-    <style define:vars={{ skillColor }}>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-      .skill {
-        color: var(--skillColor);
-        font-weight: bold ;
-      }
-    </style>
-     </head> 
-	<body>
-   <a href="/">Home</a>
-		 <a href="/blog">Blog</a>
-    <a href="/about">About</a>
-		<h1>{ pageTitle }</h1>
+
+		<BaseLayout pageTitle={pageTitle}>
     <p>Here are a few facts about me:</p>
 <ul>
   <li>My name is {identity.name}.</li>
@@ -56,5 +37,4 @@ const skillColor = 'red';
 {finished && <p>I finished this tutorial!</p>}
 
 {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-	</body>
-</html>
+</BaseLayout>
