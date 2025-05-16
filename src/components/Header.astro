@@ -4,8 +4,21 @@ import Navigation from './Navigation.astro';
 ---
 
 <header>
-  <nav>
+  <nav class="container nav-wrapper">
     <Hamburger />
+    
     <Navigation />
   </nav>
 </header>
+
+<style>
+  .nav-wrapper {
+    display: block;
+  }
+
+  @media screen and (min-width: 636px) {
+    .nav-wrapper {
+      display: flex;
+    }
+  }
+</style>

@@ -3,10 +3,57 @@
 
 ---
 
+<ul class="nav-links container">  
+      <li><a href="/" class="contrast">Home</a></li> 
+  <li><a href="/blog/" class="contrast">Blog</a></li>
+  
+  <li><a href="/about/" class="contrast">About</a></li>
 
-<div class="nav-links">
-      <a href="/">Home</a>
-        
-      <a href="/blog">Blog</a>
-      <a href="/about">About</a>
-</div>
+</ul>
+
+<style>
+  .nav-links {
+    width: 100%;
+    top: 5rem;
+    left: 48px;
+    background-color: var(--pico-primary-background);
+    display: none;
+    margin: 0;
+  }
+
+  .nav-links a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    /* font-size: 1.2rem; */
+    /* font-weight: bold; */
+    /* text-transform: uppercase; */
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background-color: var(--pico-primary-background);
+  }
+  .expanded {
+    display: grid;
+  }
+
+  @media screen and (min-width: 636px) {
+    .nav-links {
+      margin-left: 5em;
+      display: block;
+      position: static;
+      width: auto;
+      background: none;
+    }
+
+    .nav-links a {
+      display: inline-block;
+      padding: 15px 20px;
+    }
+  }
+</style>
+
+
+
